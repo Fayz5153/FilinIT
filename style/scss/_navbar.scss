@@ -104,8 +104,6 @@
     font-size: 18px;
   }
   .nav{
-    &__top{
-    }
     &__bottom{
       li{
         a{
@@ -243,18 +241,12 @@
   ._address, ._phone{
     font-size: 14px;
   }
-  .nav{
-    &__top{
-    }
-  }
 }
 @media (max-width:768px) {
   ._address,._phone{
     font-size: 11px;
   }
   .nav{
-    &__top{
-    }
     &__bottom{
       li{
         padding: 15px 10px 15px 30px;
