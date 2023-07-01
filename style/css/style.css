@@ -466,7 +466,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: url(../../../assets/img/static/hero_bg.png);
+  background: url(../../../assets/img/static/hero_bg.webp);
   background-position: center;
   background-size: cover;
 }
