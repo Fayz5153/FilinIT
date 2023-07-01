@@ -27,8 +27,8 @@
         </div>
         <nav class="nav">
             <div class="nav__top">
-                <p class="nav__address">127549, Москва, Алтуфьевское шоссе, 56</p>
-                <a href="tel: +7(495) 707-04-39" class="nav__phone">+7(495) 707-04-39</a>
+                <p class="_address">127549, Москва, Алтуфьевское шоссе, 56</p>
+                <a href="tel: +7(495) 707-04-39" class="_phone">+7(495) 707-04-39</a>
             </div>
             <ul class="nav__bottom">
                 <li><a href="#" class="active">О нас</a></li>
@@ -36,7 +36,7 @@
                 <li><a href="#">Лето-23</a></li>
                 <li><a href="#">Мероприятия</a></li>
                 <li><a href="#">Преподаватели</a></li>
-                <li><a href="#">вопросы</a></li>
+                <li><a href="#">Вопросы</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
@@ -166,7 +166,7 @@
         <div class="container">
             <div class="result">
                 <p class="result__title">
-                    Результаты ШКОЛЫ ФИЛИН it
+                    Результаты школы «филин it»
                 </p>
                 <div class="results">
                     <div class="result__card rc1">
@@ -214,13 +214,69 @@
                         <p class="result__text">Ребята на собственном опыте понимают для чего необходимы естественные науки</p>
                     </div>
                     <div class="rc6">
-                        <button class="result__modal">ОСТАВИТЬ ЗАЯВКУ</button>
+                        <button class="result__modal__btn" id="modal__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                        <div class="result__modal">
+                            <div class="rm__close"></div>
+                            <div class="rm__container">
+                                <div class="modal__close">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <form action="">
+                                    <p>Оставьте Ваш номер телефона, и мы обязательно перезвоним</p>
+                                    <input type="text" name="name" placeholder="Имя" class="rm__input">
+                                    <input type="number" name="phone" placeholder="Номер телефона" class="rm__input">
+                                    <label for="check1" class="checkbox__label">
+                                        Я согласен с политикой конфиденциальности
+                                        <input type="checkbox" name="checkbox" id="check1">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <div class="submit__btn">
+                                        <button class="result__modal__btn">ОСТАВИТЬ ЗАЯВКУ</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="footer__title">ДЕТИ — НАШЕ БУДУщЕЕ</div>
     </div>
     <!-- Result eand -->
+    <!-- Footer start -->
+    <div class="footer__container">
+        <div class="container">
+            <footer class="footer">
+                <div class="footer__top">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="assets/img/logo/logo_nav.png" alt="">
+                        </a>
+                    </div>
+                    <div class="footer__top__title">
+                        ШКОЛА ПРОГРАММИРОВАНИЯ И РОБОТОТЕХНИКИ «ФИЛИН IT»
+                    </div>
+                    <div class="footer__info">
+                        <a href="tel: +7(495) 707-04-39" class="_phone">+7(495) 707-04-39</a>
+                        <p class="_address">127549, Москва, Алтуфьевское шоссе, 56</p>
+                    </div>
+                </div>
+                <ul class="footer__bottom">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Программы обучения</a></li>
+                    <li><a href="#">Лето-23</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Преподаватели</a></li>
+                    <li><a href="#">Вопросы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Оферта</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <!-- Footer end -->
     
 
 
