@@ -1212,6 +1212,16 @@
     bottom: 50px;
     right: 50px;
   }
+  .gear_modal1{
+    transform: scale(0.11) rotate(130deg);
+    top: -15px;
+    left: 45px;
+  }
+  .gear_modal2{
+    transform: scale(0.11) rotate(15deg);
+    right: 35px;
+    bottom: 35px;
+  }
 }
 @media (max-width:620px) {
   .hero{
