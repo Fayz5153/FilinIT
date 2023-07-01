@@ -181,6 +181,8 @@
   justify-content: center;
   flex-direction: column;
   margin: 200px auto;
+  position: relative;
+  z-index: 10;
   &__title{
     color: #0D0D0D;
     text-align: center;
@@ -578,7 +580,113 @@
   }
 }
 // Footer end
+// Animation Start
+.gear__container{
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+.gear{
+  position: absolute;
+  z-index: 1;
+  img{
+    position: absolute;
+  }
+  .gear_img1{
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 0;
+  }
+  .gear_img2{
+    width: 300px;
+    height: 300px;
+    top: 260px;
+    left: 245px;
+  }
+  .gear_img3{
+    width: 330px;
+    height: 330px;
+    top: 35px;
+    left: 373px;
+  }
+}
+.gear1{
+  top: -275px;
+  left: -20px;
+  transform: rotate(30deg);
+}
+.gear__hidden1{
+  // border: 1px solid black;
+  width: 475px;
+  height: 575px;
+  position: absolute;
+  right: 0;
+  bottom: -140px;
+  overflow: hidden;
+}
+.gear2{
+  transform: rotate(205deg);
+  // border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  bottom: -21px;
+  right: -230px;
+}
+.gear_modal1{
+  top: -20px;
+  left: 100px;
+  transform: scale(0.2) rotate(130deg);
+}
+.gear_modal2{
+  right: 70px;
+  bottom: 70px;
+  transform: scale(0.2) rotate(15deg);
+}
+.gear__spin{
+  .gear_img1, .gear_img3{
+    animation: gear_spin1 6s linear infinite;
+  }
+  .gear_img2{
+    animation: gear_spin2 6s linear infinite;
+  }
+}
+@keyframes gear_spin1 {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes gear_spin2 {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(-360deg);
+  }
+}
+// Animation End
 
+.scroll__up{
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  height: 60px;
+  width: 30px;
+  z-index: 100;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  img{
+    height: 100%;
+  }
+}
 
 @media (max-width:1760px) {
   .programms{
@@ -651,6 +759,14 @@
         text-align: left;
       }
     }
+  }
+  .gear1{
+    top: -190px;
+    transform: rotate(30deg) scale(0.7);
+  }
+  .gear__hidden1{
+    transform: scale(0.7);
+    right: -70px;
   }
 }
 @media (max-width:1300px) {
@@ -844,6 +960,18 @@
     a{
       font-size: 16px;
     }
+  }
+  .gear1{
+    top: -135px;
+    transform: rotate(30deg) scale(0.5);
+  }
+  .gear__hidden1{
+    transform: scale(0.5);
+    right: -119px;
+  }
+  .scroll__up {
+    bottom: 70px;
+    right: 70px;
   }
 }
 @media (max-width:940px) {
@@ -1072,6 +1200,18 @@
       font-size: 11px;
     }
   }
+  .gear1{
+    top: -80px;
+    transform: rotate(30deg) scale(0.3);
+  }
+  .gear__hidden1{
+    transform: scale(0.3) translateY(280px);
+    right: -165px;
+  }
+  .scroll__up {
+    bottom: 50px;
+    right: 50px;
+  }
 }
 @media (max-width:620px) {
   .hero{
@@ -1286,7 +1426,20 @@
       font-size: 8px;
     }
   }
-  
+  .gear1{
+    top: -50px;
+    left: -5px;
+    transform: rotate(30deg) scale(0.2);
+  }
+  .gear__hidden1{
+    transform: scale(0.2) translateY(480px);
+    right: -190px;
+  }
+  .scroll__up {
+    height: 40px;
+    bottom: 30px;
+    right: 30px;
+  }
 }
 @media (max-width:376px) {
   .hero__title{

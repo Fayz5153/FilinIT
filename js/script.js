@@ -32,3 +32,40 @@ function modalClose() {
 
 rm__close.onclick = modalClose
 modal__close.onclick = modalClose
+
+
+// Scroll
+let last_known_scroll_position = 0;
+let ticking = false;
+const gear1 = document.querySelectorAll("#gear1")
+const gear2 = document.querySelectorAll("#gear2")
+const gear3 = document.querySelectorAll("#gear3")
+const scroll__up = document.querySelector(".scroll__up")
+
+function doSomething(scroll_pos) {
+  console.log(scroll_pos)
+  for (let i = 0; i < gear1.length; i++) {
+    gear1[i].style = `transform: rotate(${scroll_pos / 6}deg);`
+    gear2[i].style = `transform: rotate(${-scroll_pos / 6}deg);`
+    gear3[i].style = `transform: rotate(${scroll_pos / 6}deg);`
+  }
+  if (scroll_pos >= 1000) {
+    scroll__up.style = "transform: scale(1); opacity: 1;"
+  } else {
+    scroll__up.style = "transform: scale(0); opacity: 0;"
+  }
+}
+scroll__up.onclick = () => window.scrollTo(0, 0)
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
