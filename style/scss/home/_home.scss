@@ -1,13 +1,17 @@
 .hero{
-  height: 100vh ;
+  // height: 100vh ;
+  height: 880px;
   overflow: hidden;
-  max-height: 1400px;
-  min-height: 880px;
+  // max-height: 1400px;
+  // min-height: 880px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: url(../../../assets/img/static/hero_bg.png);
+  background-position: center;
+  background-size: cover;
 }
 .hero__title{
   display: flex;
@@ -851,7 +855,7 @@
 
 @media (max-width:1168px) {
   .hero{
-    min-height: 700px;
+    // min-height: 700px;
   }
   .hero__title{
     h1{
@@ -1055,9 +1059,12 @@
 }
 @media (max-width:768px) {
   .hero{
-    min-height: 600px;
+    // min-height: 600px;
+    height: 447px;
+    padding-top: 110px;
   }
   .hero__title{
+    padding: 25px 0;
     h1{
       font-size: 32px;
       line-height: normal;
@@ -1225,7 +1232,8 @@
 }
 @media (max-width:620px) {
   .hero{
-    min-height: 550px;
+    // min-height: 550px;
+    padding-top: 60px;
   }
   .hero__title{
     h1{
@@ -1332,7 +1340,11 @@
   }
 }
 @media (max-width:426px) {
+  .hero{
+    height: 242px;
+  }
   .hero__title{
+    padding: 15px 0;
     h1{
       font-size: 20px;
     }

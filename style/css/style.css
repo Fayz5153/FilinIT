@@ -215,9 +215,9 @@ button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     z-index: 2;
   }
   .burger__btn button {
@@ -265,10 +265,30 @@ button {
     -webkit-backdrop-filter: blur(0px);
             backdrop-filter: blur(0px);
     height: 110px;
+    padding-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-bottom: 10px;
+  }
+  .navbar .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navbar__right {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .navbar__right .nav__user {
     width: 40px;
@@ -430,10 +450,8 @@ button {
 }
 
 .hero {
-  height: 100vh;
+  height: 880px;
   overflow: hidden;
-  max-height: 1400px;
-  min-height: 880px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -448,6 +466,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: url(../../../assets/img/static/hero_bg.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .hero__title {
@@ -1559,9 +1580,6 @@ button {
 }
 
 @media (max-width: 1168px) {
-  .hero {
-    min-height: 700px;
-  }
   .hero__title h1 {
     max-width: 100%;
     padding: 0 40px;
@@ -1751,7 +1769,11 @@ button {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 600px;
+    height: 447px;
+    padding-top: 110px;
+  }
+  .hero__title {
+    padding: 25px 0;
   }
   .hero__title h1 {
     font-size: 32px;
@@ -1911,7 +1933,7 @@ button {
 
 @media (max-width: 620px) {
   .hero {
-    min-height: 550px;
+    padding-top: 60px;
   }
   .hero__title h1 {
     font-size: 27px;
@@ -2024,6 +2046,12 @@ button {
 }
 
 @media (max-width: 426px) {
+  .hero {
+    height: 242px;
+  }
+  .hero__title {
+    padding: 15px 0;
+  }
   .hero__title h1 {
     font-size: 20px;
   }

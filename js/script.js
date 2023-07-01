@@ -49,7 +49,7 @@ function doSomething(scroll_pos) {
     gear2[i].style = `transform: rotate(${-scroll_pos / 6}deg);`
     gear3[i].style = `transform: rotate(${scroll_pos / 6}deg);`
   }
-  if (scroll_pos >= 1000) {
+  if (scroll_pos >= 768) {
     scroll__up.style = "transform: scale(1); opacity: 1;"
   } else {
     scroll__up.style = "transform: scale(0); opacity: 0;"
