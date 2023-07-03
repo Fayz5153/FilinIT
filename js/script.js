@@ -43,7 +43,6 @@ const gear3 = document.querySelectorAll("#gear3")
 const scroll__up = document.querySelector(".scroll__up")
 
 function doSomething(scroll_pos) {
-  console.log(scroll_pos)
   for (let i = 0; i < gear1.length; i++) {
     gear1[i].style = `transform: rotate(${scroll_pos / 6}deg);`
     gear2[i].style = `transform: rotate(${-scroll_pos / 6}deg);`

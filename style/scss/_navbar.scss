@@ -163,7 +163,7 @@
   }
   .navbar{
     background: rgb(255, 255, 255);
-    backdrop-filter: blur(0px);
+    backdrop-filter: none;
     height: 110px;
     padding-bottom: 10px;
     display: grid;
@@ -275,7 +275,7 @@
     }
   }
   ._phone, ._address{
-    font-size: 8px;
+    font-size: 9px;
   }
   .nav{
     position: fixed;
@@ -309,9 +309,9 @@
       left: 0;
       top: 0;
       position: relative;
-      border-radius: 0px;
+      border-radius: 0px 0 20px 0;
       background: none;
-      backdrop-filter: blur(0px);
+      backdrop-filter: none;
     }
   }
   .nav__show{
