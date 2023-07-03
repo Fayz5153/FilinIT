@@ -376,7 +376,7 @@ button {
     height: 45px;
   }
   ._phone, ._address {
-    font-size: 9px;
+    font-size: 10px;
   }
   .nav {
     position: fixed;
@@ -1343,7 +1343,7 @@ button {
     width: 330px;
   }
   .programm__title, .result__title,
-.mission__title {
+  .mission__title {
     font-size: 54px;
   }
   .result__card .result__img img {
@@ -1525,7 +1525,7 @@ button {
     font-size: 33px;
   }
   .programm__title, .result__title,
-.mission__title {
+  .mission__title {
     font-size: 44px;
   }
   .mission {
@@ -1974,7 +1974,7 @@ button {
     left: -20px;
   }
   .result__title,
-.mission__title {
+  .mission__title {
     font-size: 16px;
   }
   .programms {
