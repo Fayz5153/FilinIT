@@ -8,7 +8,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./style/css/style.css">
-    <link rel="stylesheet" href="./style/css/loading.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css" rel="stylesheet">
 
     <title>ФИЛИН IT - Вопросы</title>
 </head>
@@ -34,11 +34,11 @@
             </div>
             <ul class="nav__bottom">
                 <li><a href="#">О нас</a></li>
-                <li><a href="#" class="active">Программы обучения</a></li>
+                <li><a href="#">Программы обучения</a></li>
                 <li><a href="#">Лето-23</a></li>
                 <li><a href="#">Мероприятия</a></li>
                 <li><a href="#">Преподаватели</a></li>
-                <li><a href="#">Вопросы</a></li>
+                <li><a href="#" class="active">Вопросы</a></li>
                 <li><a href="./text-page.html">Контакты</a></li>
             </ul>
         </nav>
@@ -72,55 +72,109 @@
         <p class="question__title">ЗАДАЙ СВОЙ ВОПРОС</p>
         <p class="question__subtitle">или найди нужный в списке</p>
         <div class="question__filter">
-            <a href="#send-Quest">ЗАДАТЬ ВОПРОС</a>
+            <a href="#send-Quest" class="send__quest">ЗАДАТЬ ВОПРОС</a>
             <form action="">
-            <button>
-                <img src="./assets/img/static/quests/filter.png" alt="" class="qf__sufix">
-                <span>Сначала новые</span>
-                <img src="./assets/img/static/quests/arrow.png" alt="" class="qf__prefix">
-            </button>
+                <div class="select" tabindex="1">
+                    <input class="selectopt select__input" name="test" type="radio" id="opt1" checked>
+                    <label for="opt1" class="option select__label">Сначала новые</label>
+                    <input class="selectopt select__input" name="test" type="radio" id="opt2">
+                    <label for="opt2" class="option select__label">Сначала старые</label>
+                </div>
             </form>
         </div>
         <div class="questions">
             <div class="question">
                 <div class="question__info">
-                    <img src="./assets/img/static/quests/user1.png" alt="">
+                    <div class="qi__img">
+                        <img src="./assets/img/static/quests/default_user.png" alt="">
+                    </div>
                     <div>
-                        <p>Анна Смирнова  27.05.2023</p>
-                        <p>Чему научится ребенок на курсе “программирование”?</p>
+                        <p class="qi__user">Анна Смирнова  27.05.2023</p>
+                        <p class="quest">Чему научится ребенок на курсе “программирование”?</p>
                     </div>
                 </div>
                 <div class="answer">
-                    <p>
+                    <p class="answer__text">
                         Здравствуйте!
                         
-                        - Ребенок научится самостоятельно решать задачи
-                        - Подойдет на шаг ближе к профессию будущего
-                        - Научится работать в команде
-                        - Обучится к навыкам алгоритмического мышления
-                        - Научится языку программирования таких как: Java Script и Python
+                        - Ребенок научится самостоятельно решать задачи<br>
+                        - Подойдет на шаг ближе к профессию будущего<br>
+                        - Научится работать в команде<br>
+                        - Обучится к навыкам алгоритмического мышления<br>
+                        - Научится языку программирования таких как: Java Script и Python <br>
                         - Будет развиваться логика и интеллект и много другого!
                     </p>
-                    <img src="./assets/img/static/quests/arrow2.png" alt="">
+                    <img src="./assets/img/static/quests/arrow2.svg" alt="" class="answer__arrow">
                 </div>
             </div>
             <div class="question">
                 <div class="question__info">
-                    <img src="./assets/img/static/quests/user2.png" alt="">
+                    <div class="qi__img">
+                        <img src="./assets/img/static/quests/default_user.png" alt="">
+                    </div>
                     <div>
-                        <p>Ирина Соколова  27.05.2023</p>
-                        <p>Есть ли каникулы?</p>
+                        <p class="qi__user">Ирина Соколова  27.05.2023</p>
+                        <p class="quest">Есть ли каникулы?</p>
                     </div>
                 </div>
                 <div class="answer">
-                    <p>
+                    <p class="answer__text">
                         Здравствуйте! Конечно, у детей каникулы как и в обычной школе. Весенние, зимние, осенние, и 3 месяца дети отдыхают летом. На время летних каникул у нас есть лагерь с развивающими занятиями для детей 7-17 лет.
                     </p>
-                    <img src="./assets/img/static/quests/arrow2.png" alt="">
+                    <img src="./assets/img/static/quests/arrow2.svg" alt="" class="answer__arrow">
                 </div>
             </div>
         </div>
-      </div>
+        <div class="pagination">
+
+        </div>
+    </div>
+
+    <div class="gear__container container">
+        <div class="gear__hidden2">
+            <div class="gear gear3">
+                <img class="gear_img1" id="gear1" src="./assets/img/animation/gear.png" alt="">
+                <img class="gear_img2" id="gear2" src="./assets/img/animation/gear.png" alt="">
+                <img class="gear_img3" id="gear3" src="./assets/img/animation/gear.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="quest__form">
+        <div class="container">
+            <form action="">
+                <p class="quest__form__title">
+                    Не нашли нужный вопрос? Напишите, мы ответим!
+                </p>
+                <input class="form__input" type="text" placeholder="Имя" name="name">
+                <input class="form__input" type="email" placeholder="Эл. почта" name="email">
+                <textarea name="text" id="" placeholder="Введите вопрос"></textarea>
+                <label for="form__check">
+                    <input type="checkbox" id="form__check">
+                    Я согласен с политикой конфиденциальности
+                </label>
+                <button class="send__quest"  onclick="message()">задать вопрос</button>
+
+                <div class="gear gear_form gear__spin">
+                    <img class="gear_img1" src="./assets/img/animation/gear.png" alt="">
+                    <img class="gear_img2" src="./assets/img/animation/gear.png" alt="">
+                    <img class="gear_img3" src="./assets/img/animation/gear.png" alt="">
+                </div>
+                <script>
+                    function message() {
+                      Swal.fire({
+                        title:"Ваш вопрос успешно доставлен!",
+                        text:"Ответ будет доставлен на почту в течение 3 дней, а также опубликован на сайте",
+                        icon: "success",
+                        showConfirmButton:false
+                      });
+                    }
+                </script>
+            </form>
+
+        </div>
+    </div>
+
     </div>
     <!-- Quests end -->
     <!-- Footer start -->
@@ -162,5 +216,6 @@
 
 
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
