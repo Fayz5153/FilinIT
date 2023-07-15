@@ -2470,6 +2470,11 @@ button {
           justify-content: center;
 }
 
+#send__btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
 .questions {
   margin-top: 104px;
 }
@@ -2817,6 +2822,61 @@ button {
   line-height: 120%;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  list-style-type: none;
+}
+.pagination ul a, .pagination ul span {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.185px;
+  margin: 0 4px;
+}
+.pagination ul .page__active {
+  font-size: 36px;
+  font-weight: 700;
+  pointer-events: none;
+}
+.pagination #page__prev, .pagination #page__next {
+  background: url(../../../assets/img/static/quests/arrow2.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.pagination #page__prev {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 30px;
+}
+.pagination #page__next {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: 30px;
+}
+
 @media (max-width: 1796px) {
   .question__search {
     padding: 0 100px;
@@ -2989,6 +3049,16 @@ button {
     left: -60px;
     bottom: 190px;
   }
+  .pagination ul a, .pagination ul span {
+    font-size: 22px;
+  }
+  .pagination ul .page__active {
+    font-size: 28px;
+  }
+  .pagination #page__prev, .pagination #page__next {
+    width: 25px;
+    height: 25px;
+  }
 }
 @media (max-width: 850px) {
   .quest__form {
@@ -3154,6 +3224,22 @@ button {
   .swal2-html-container {
     font-size: 12px !important;
   }
+  .pagination ul a, .pagination ul span {
+    font-size: 14px;
+  }
+  .pagination ul .page__active {
+    font-size: 16px;
+  }
+  .pagination #page__prev, .pagination #page__next {
+    width: 20px;
+    height: 20px;
+  }
+  .pagination #page__prev {
+    margin-right: 20px;
+  }
+  .pagination #page__next {
+    margin-left: 20px;
+  }
 }
 @media (max-width: 620px) {
   .question__search__container {
@@ -3297,6 +3383,24 @@ button {
   }
   .quest__form form {
     padding: 20px;
+  }
+  .pagination ul a, .pagination ul span {
+    font-size: 10px;
+    margin: 0 2px;
+  }
+  .pagination ul .page__active {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .pagination #page__prev, .pagination #page__next {
+    width: 15px;
+    height: 15px;
+  }
+  .pagination #page__prev {
+    margin-right: 15px;
+  }
+  .pagination #page__next {
+    margin-left: 15px;
   }
 }
 @media (max-width: 375px) {

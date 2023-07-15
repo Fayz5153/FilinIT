@@ -126,7 +126,17 @@
             </div>
         </div>
         <div class="pagination">
-
+            <ul>
+                <li><a href="#prev" id="page__prev"></a></li>
+                <li><a href="#1">1,</a></li>
+                <li><span>...</span></li>
+                <li><a href="#4">4,</a></li>
+                <li><a href="#5" class="page__active">5,</a></li>
+                <li><a href="#6">6,</a></li>
+                <li><span>...</span></li>
+                <li><a href="#11">11</a></li>
+                <li><a href="#next" id="page__next"></a></li>
+            </ul>
         </div>
     </div>
 
@@ -153,7 +163,7 @@
                     <input type="checkbox" id="form__check">
                     Я согласен с политикой конфиденциальности
                 </label>
-                <button class="send__quest"  onclick="message()">задать вопрос</button>
+                <button class="send__quest" id="send__btn" disabled onclick="message()">задать вопрос</button>
 
                 <div class="gear gear_form gear__spin">
                     <img class="gear_img1" src="./assets/img/animation/gear.png" alt="">
@@ -161,6 +171,9 @@
                     <img class="gear_img3" src="./assets/img/animation/gear.png" alt="">
                 </div>
                 <script>
+                    form__check.onchange = (e) =>{
+                        send__btn.disabled = !e.target.checked
+                    }
                     function message() {
                       Swal.fire({
                         title:"Ваш вопрос успешно доставлен!",
