@@ -2842,7 +2842,7 @@ button {
           align-items: flex-end;
   list-style-type: none;
 }
-.pagination ul a, .pagination ul span {
+.pagination ul button, .pagination ul span {
   color: #000;
   font-family: Montserrat;
   font-size: 27px;
@@ -2851,6 +2851,9 @@ button {
   line-height: normal;
   letter-spacing: 4.185px;
   margin: 0 4px;
+  background: none;
+  border: none;
+  outline: none;
 }
 .pagination ul .page__active {
   font-size: 36px;
@@ -3049,7 +3052,7 @@ button {
     left: -60px;
     bottom: 190px;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 22px;
   }
   .pagination ul .page__active {
@@ -3224,7 +3227,7 @@ button {
   .swal2-html-container {
     font-size: 12px !important;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 14px;
   }
   .pagination ul .page__active {
@@ -3384,7 +3387,7 @@ button {
   .quest__form form {
     padding: 20px;
   }
-  .pagination ul a, .pagination ul span {
+  .pagination ul button, .pagination ul span {
     font-size: 10px;
     margin: 0 2px;
   }
