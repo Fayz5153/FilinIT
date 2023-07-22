@@ -55,11 +55,19 @@ button {
           justify-content: space-between;
   width: 100%;
   height: 165px;
+  padding: 0 150px;
+  z-index: 100;
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
   background: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
-  padding: 0 150px;
-  z-index: 100;
+  z-index: -1;
+  left: 0;
 }
 
 .navbar__other__pages {
@@ -213,6 +221,61 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown:hover .dropdown__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: calc(100% - 10px);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  padding: 40px;
+  z-index: -100;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 20px;
+  opacity: 0;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+.dropdown__menu li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 305px !important;
+  padding: 0 !important;
+}
+.dropdown__menu a {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: lowercase;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  text-align: left !important;
 }
 
 @media (max-width: 1796px) {
@@ -375,16 +438,24 @@ button {
         -ms-flex-align: start;
             align-items: flex-start;
     border-radius: 0px 20px 20px 0px;
-    background: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
     width: 257px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     -webkit-transition: 0.4s linear;
     transition: 0.4s linear;
-    overflow: hidden;
     height: auto;
+  }
+  .nav__bottom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    z-index: -1;
   }
   .nav__bottom li {
     padding: 10px 10px 10px 40px;
@@ -392,6 +463,12 @@ button {
     height: auto;
     -webkit-transition: 0.2s linear;
     transition: 0.2s linear;
+  }
+  .nav__bottom li:first-child {
+    border-radius: 0px 20px 0px 0px;
+  }
+  .nav__bottom li:last-child {
+    border-radius: 0px 0px 20px 0px;
   }
   .nav__bottom li:hover {
     background: #FF9A24;
@@ -412,6 +489,17 @@ button {
   .logo a img {
     width: 80px;
     height: 80px;
+  }
+  .dropdown__menu {
+    left: 100%;
+    padding: 20px;
+    gap: 15px;
+    border-radius: 25px;
+    bottom: auto;
+    top: 0;
+  }
+  .dropdown__menu li:hover {
+    background: none;
   }
 }
 @media (max-width: 1024px) {
@@ -457,9 +545,6 @@ button {
     width: 257px;
     padding: 0;
     border-radius: 0px 20px 20px 0px;
-    background: rgba(255, 255, 255, 0.7);
-    -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
     -webkit-transition: 0.4s linear;
     transition: 0.4s linear;
   }
@@ -489,10 +574,13 @@ button {
     left: 0;
     top: 0;
     position: relative;
-    border-radius: 0px 0 20px 0;
+    border-radius: 0px 20px 20px 0;
     background: none;
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
+  }
+  .nav__bottom::before {
+    border-radius: 0px 20px 20px 0;
   }
   .nav__show {
     left: 0;
@@ -505,6 +593,20 @@ button {
   .navbar__right .nav__user {
     width: 35px;
     height: 35px;
+  }
+  .dropdown__menu li {
+    width: auto !important;
+  }
+}
+@media (max-width: 425px) {
+  .dropdown__menu {
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    top: 100%;
+  }
+  .dropdown:hover .dropdown__menu {
+    z-index: 100;
   }
 }
 .hero {
