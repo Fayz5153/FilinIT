@@ -89,3 +89,10 @@ if (answer) {
     }
   }
 }
+
+// Dropdown
+const dropdown = document.querySelector(".dropdown")
+
+dropdown.onclick = () =>{
+  dropdown.classList.toggle("dropdown__show")
+}
