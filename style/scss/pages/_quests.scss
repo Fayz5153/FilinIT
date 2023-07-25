@@ -417,7 +417,7 @@
     display: flex;
     align-items: flex-end;
     list-style-type: none;
-    button, span{
+    a, span{
       color: #000;
       font-family: Montserrat;
       font-size: 27px;
@@ -631,7 +631,7 @@
   }
   .pagination{
     ul{
-      button,span{
+      a,span{
         font-size: 22px;
       }
       .page__active{
@@ -803,7 +803,7 @@
   
   .pagination{
     ul{
-      button,span{
+      a,span{
         font-size: 14px;
       }
       .page__active{
@@ -963,7 +963,7 @@
   }
   .pagination{
     ul{
-      button,span{
+      a,span{
         font-size: 10px;
         margin: 0 2px;
       }
